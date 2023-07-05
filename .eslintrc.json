@@ -1,0 +1,18 @@
+{
+  "root": true,
+  "extends": ["@react-native", "airbnb", "airbnb-typescript"],
+  "plugins": ["@typescript-eslint"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "react/jsx-closing-bracket-location": "off"
+  },
+  "ignorePatterns": ["index.js", "__tests__"]
+}
