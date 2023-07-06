@@ -12,7 +12,8 @@
     "project": "./tsconfig.json"
   },
   "rules": {
-    "react/jsx-closing-bracket-location": "off"
+    "import/no-cycle": "off",
+    "@typescript-eslint/indent": "off"
   },
   "ignorePatterns": ["index.js", "__tests__"]
 }
