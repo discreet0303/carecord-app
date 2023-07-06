@@ -13,7 +13,9 @@
   },
   "rules": {
     "import/no-cycle": "off",
-    "@typescript-eslint/indent": "off"
+    "implicit-arrow-linebreak": "off",
+    "@typescript-eslint/indent": "off",
+    "react/jsx-curly-newline": "off"
   },
   "ignorePatterns": ["index.js", "__tests__"]
 }

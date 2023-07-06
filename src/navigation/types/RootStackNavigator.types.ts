@@ -1,9 +1,19 @@
-import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { NavigatorScreenParams } from '@react-navigation/native';
+import { AuthStackParamList } from './AuthStackNavigator.types';
+import { CBStackParamList } from './CBStackNavigator.types';
+import { CBUserStackParamList } from './CBUserStackNavigator.types';
+import { MainTabParamList } from './MainTabNavigator.types';
+
+export enum RootStackRouteEnum {
+  AuthStack = 'AuthStack',
+  MainTab = 'MainTab',
+  CBStack = 'CBStack',
+  CBUserStack = 'CBUserStack',
+}
 
 export type RootStackParamList = {
-  Home: undefined;
-  Profile: { userId: string };
-  Feed: { sort: 'latest' | 'top' } | undefined;
+  [RootStackRouteEnum.AuthStack]: NavigatorScreenParams<AuthStackParamList>;
+  [RootStackRouteEnum.MainTab]: NavigatorScreenParams<MainTabParamList>;
+  [RootStackRouteEnum.CBStack]: NavigatorScreenParams<CBStackParamList>;
+  [RootStackRouteEnum.CBUserStack]: NavigatorScreenParams<CBUserStackParamList>;
 };
-
-export type HomeScreenProps = NativeStackScreenProps<RootStackParamList, 'Home'>;
